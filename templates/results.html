@@ -29,6 +29,16 @@
                         {% endfor %}
                     </tbody>
                 </table>
+                {% if extra_class_errors %}
+                <div class="alert alert-danger mt-3">
+                    <h4>Extra Classes Found:</h4>
+                    <ul>
+                        {% for error in extra_class_errors %}
+                            <li>{{ error }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% endif %}
                 <a href="/" class="btn btn-secondary btn-block">Check Another URL</a>
             </div>
         </div>
